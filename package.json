@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server ./public",
+    "build": "rm -rf public && mkdir public && npx @11ty/eleventy --input=src --output=public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

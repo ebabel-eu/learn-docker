@@ -3,6 +3,7 @@
 ## Run locally
 ```shell
 npm install
+npm run build
 npm start
 ```
 
