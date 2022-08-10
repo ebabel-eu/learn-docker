@@ -1,14 +1,18 @@
 {
   "name": "learn-docker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Learn Docker and eleventy.",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf public && mkdir public && npx @11ty/eleventy --input=src --output=public",
     "start": "npx @11ty/eleventy --input=src --output=public --serve --port=8081",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Thomas Amar <hello@ebabel.eu>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebabel-eu/learn-docker.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1"
