@@ -16,6 +16,8 @@ npm run build
 The result is in the `public` folder. Note that folder gets deleted and re-created, so all files in `public` should be generated from the `src` folder.
 
 ## Run as a Docker container
+Note: the Docker container doesn't have anything but nginx and static files.
+
 Create an image (this is only done once):
 
 ```shell
