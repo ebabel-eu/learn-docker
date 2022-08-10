@@ -1,13 +1,5 @@
-FROM node:12.16.2
+FROM nginx:1.22.0
 
-WORKDIR /code
+COPY nginx.conf /etc/nginx/nginx.conf
 
-ENV PORT 80
-
-COPY package.json /code/package.json
-
-RUN npm install
-
-COPY . /code
-
-CMD [ "node", "src/server.js" ]
+COPY /public /usr/share/nginx/html
