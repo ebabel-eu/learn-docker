@@ -3,11 +3,17 @@
 ## Run locally
 ```shell
 npm install
-npm run build
 npm start
 ```
 
-Browse to http://localhost:8080
+Browse to http://localhost:8081
+
+## Build locally without running
+```shell
+npm run build
+```
+
+The result is in the `public` folder. Note that folder gets deleted and re-created, so all files in `public` should be generated from the `src` folder.
 
 ## Run as a Docker container
 Create an image (this is only done once):
@@ -32,3 +38,7 @@ Browse to http://localhost:8080
 - List all the local images: `docker images`
 - Delete an image: `docker image rm learn-docker-image`
 
+## todo
+- Read from a database
+- Generate a static page from a template and data from the database
+- Build admin forms to easily manage the data in the database
