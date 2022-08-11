@@ -1,6 +1,10 @@
 # Learn Docker
 Learn Docker and eleventy.
 
+## Set database connection parameters
+Create a .env file that will hold the parameters required to connect to it.
+This .env file is never commited to the repository and must remain a secret.
+
 ## Run locally
 ```shell
 npm install
