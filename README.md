@@ -5,6 +5,19 @@ Learn Docker and eleventy.
 Create a .env file that will hold the parameters required to connect to it.
 This .env file is never commited to the repository and must remain a secret.
 
+```shell
+touch .env
+```
+
+Note the values here need to be updated with the real connection secrets to your database:
+
+```javascript
+DB_HOST="database host"
+DB_USER = "database username - not root !"
+DB_PASSWORD = "database password"
+DB_NAME = "database name"
+```
+
 ## Run locally
 ```shell
 npm install
@@ -46,6 +59,8 @@ Browse to http://localhost:8081
 - Delete an image: `docker image rm learn-docker-image`
 
 ## todo
+- Setup a mysql database.
 - Read from a database - see tutorial on https://www.raymondcamden.com/2021/04/15/building-a-database-driven-eleventy-site
-- Generate a static page from a template and data from the database
-- Build admin forms to easily manage the data in the database
+- Generate a static page from a template and data from the database.
+- Build admin forms to easily manage the data in the database.
+- Deploy to S3 using the aws command line, like my other sites.
