@@ -5,6 +5,11 @@
   </head>
   <body>
     <h1>{{ eleventyNavigation.title }}</h1>
-    language: {{ language }}
+    <p>Destinations:</p>
+    <ul>
+    {% for destination in destinations -%}
+      <li>{{ destination }}</li>
+    {% endfor -%}
+    </ul
   </body>
 </html>
