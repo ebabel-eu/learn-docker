@@ -7,7 +7,7 @@ npm install
 npm start
 ```
 
-Browse to http://localhost:8081
+Browse to http://localhost:8080
 
 ## Build locally without running
 ```shell
@@ -28,10 +28,10 @@ docker build -t learn-docker-image .
 Create a container and run it:
 
 ```shell
-docker run --name learn-docker-container -d -p 8080:80 learn-docker-image
+docker run --name learn-docker-container -d -p 8081:80 learn-docker-image
 ```
 
-Browse to http://localhost:8080
+Browse to http://localhost:8081
 
 ## More Docker commands
 
