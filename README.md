@@ -59,7 +59,7 @@ Browse to http://localhost:8081
 - Delete an image: `docker image rm learn-docker-image`
 
 ## todo
-- Setup a mysql database.
+- Setup a mysql database - see https://dockerlabs.collabnix.com/intermediate/workshop/DockerCompose/Create_first_docker-compose_file_with_ngnix_and_mysql.html
 - Read from a database - see tutorial on https://www.raymondcamden.com/2021/04/15/building-a-database-driven-eleventy-site
 - Generate a static page from a template and data from the database.
 - Build admin forms to easily manage the data in the database.
