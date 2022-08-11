@@ -4,8 +4,8 @@
   "description": "Learn Docker and eleventy.",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf public && mkdir public && npx @11ty/eleventy --input=src --output=public",
-    "start": "npx @11ty/eleventy --input=src --output=public --serve --port=8080",
+    "build": "rm -rf public && mkdir public && npx @11ty/eleventy --input=./ --output=public",
+    "start": "npx @11ty/eleventy --input=./ --output=public --serve --port=8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Thomas Amar <hello@ebabel.eu>",
