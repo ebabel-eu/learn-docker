@@ -42,6 +42,6 @@ Browse to http://localhost:8081
 - Delete an image: `docker image rm learn-docker-image`
 
 ## todo
-- Read from a database
+- Read from a database - see tutorial on https://www.raymondcamden.com/2021/04/15/building-a-database-driven-eleventy-site
 - Generate a static page from a template and data from the database
 - Build admin forms to easily manage the data in the database
