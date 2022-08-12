@@ -18,8 +18,11 @@ DB_PASSWORD = "database password"
 DB_NAME = "database name"
 ```
 
-## Run locally while developing
+## Run in Host machine instead of Docker
 During development, continuously build when code changes and serve the local files with 11ty
+
+Note that running locally instead of in Docker assumes there is a local database on your host machine.
+If you don't want to develop in your host machine, use the Docker process detailed below.
 
 ```shell
 npm install
@@ -37,8 +40,8 @@ The result is in the `public` folder. Note that folder gets deleted and re-creat
 
 Check there are no vulnerabilities in the npm dependencies with `npm audit`
 
-## Run as a Docker container
-Create an image, build this static website, and copy it in the image:
+## Run in a Docker container
+Create a node image, build this static website, and copy it in the nginx final image:
 
 ```shell
 npm run docker:build
@@ -51,6 +54,8 @@ npm run docker:compose
 ```
 
 Browse to http://localhost:8088
+
+To stop running, execute `npm run docker:stop`
 
 ### More Docker commands
 - List all processes, even if not running: `docker ps -a`

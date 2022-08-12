@@ -1,4 +1,6 @@
 version: '3.8'
+volumes:
+  db-data:
 services:
   learn-docker-nginx-service:
     container_name: learn-docker-container
@@ -7,3 +9,9 @@ services:
     mem_limit: 2048m
     ports:
       - "8088:80"
+  learn-docker-database-service:
+    image: mysql:5.7
+    container_name: learn-docker-mysql
+    restart: unless-stopped
+    volumes:
+      - db_data
