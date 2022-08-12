@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  learn-docker-nginx-service:
+    container_name: learn-docker-container
+    image: learn-docker-image:1.0.0
+    cpus: 1.5
+    mem_limit: 2048m
+    ports:
+      - "8088:80"

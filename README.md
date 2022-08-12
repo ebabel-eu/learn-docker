@@ -12,46 +12,47 @@ touch .env
 Note the values here need to be updated with the real connection secrets to your database:
 
 ```javascript
-DB_HOST="database host"
+DB_HOST = "database host"
 DB_USER = "database username - not root !"
 DB_PASSWORD = "database password"
 DB_NAME = "database name"
 ```
 
-## Run locally
+## Run locally while developing
+During development, continuously build when code changes and serve the local files with 11ty
+
 ```shell
 npm install
 npm start
 ```
 
-Browse to http://localhost:8080
+Browse to http://localhost:8088
 
-## Build locally without running
+### Build locally without running
 ```shell
 npm run build
 ```
 
-The result is in the `public` folder. Note that folder gets deleted and re-created, so all files in `public` should be generated from the `src` folder.
+The result is in the `public` folder. Note that folder gets deleted and re-created, so all files in `public` should be generated from this repository.
+
+Check there are no vulnerabilities in the npm dependencies with `npm audit`
 
 ## Run as a Docker container
-Note: the Docker container doesn't have anything but nginx and static files.
-
-Create an image (this is only done once):
+Create an image, build this static website, and copy it in the image:
 
 ```shell
-docker build -t learn-docker-image .
+npm run docker:build
 ```
 
 Create a container and run it:
 
 ```shell
-docker run --name learn-docker-container -d -p 8081:80 learn-docker-image
+npm run docker:container
 ```
 
-Browse to http://localhost:8081
+Browse to http://localhost:8080
 
-## More Docker commands
-
+### More Docker commands
 - List all processes, even if not running: `docker ps -a`
 - Stop a container: `docker stop learn-docker-container`
 - Delete a container: `docker rm learn-docker-container`

@@ -1,33 +1,33 @@
-require('dotenv').config();
+// require('dotenv').config();
 
-const DB_HOST = process.env.DB_HOST;
-const DB_USER = process.env.DB_USER;
-const DB_PASSWORD = process.env.DB_PASSWORD;
-const DB_NAME = process.env.DB_NAME;
+// const DB_HOST = process.env.DB_HOST;
+// const DB_USER = process.env.DB_USER;
+// const DB_PASSWORD = process.env.DB_PASSWORD;
+// const DB_NAME = process.env.DB_NAME;
 
-const mysql = require('mysql2/promise');
+// const mysql = require('mysql2/promise');
 
-module.exports = async function() {
-	console.log('get destinations');
-	let destinations = [];
+// module.exports = async function() {
+// 	console.log('get destinations');
+// 	let destinations = [];
 
-	const connection = await mysql.createConnection({
-		host     : DB_HOST,
-		user     : DB_USER,
-		password : DB_PASSWORD,
-		database : DB_NAME
-	});
+// 	const connection = await mysql.createConnection({
+// 		host     : DB_HOST,
+// 		user     : DB_USER,
+// 		password : DB_PASSWORD,
+// 		database : DB_NAME
+// 	});
 
-	const [rows] = await connection.execute('select id, name from destinations order by name');
+// 	const [rows] = await connection.execute('select id, name from destinations order by name');
 
-	for(let i=0; i<rows.length; i++) {
-		destinations.push({
-			id:rows[i].id,
-			name:rows[i].name
-		});
-	}
+// 	for(let i=0; i<rows.length; i++) {
+// 		destinations.push({
+// 			id:rows[i].id,
+// 			name:rows[i].name
+// 		});
+// 	}
 
-	connection.end();
+// 	connection.end();
 	
-	return destinations;
-}
+// 	return destinations;
+// }
