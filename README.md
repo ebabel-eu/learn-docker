@@ -44,13 +44,13 @@ Create an image, build this static website, and copy it in the image:
 npm run docker:build
 ```
 
-Create a container and run it:
+Compose a container and run it:
 
 ```shell
-npm run docker:container
+npm run docker:compose
 ```
 
-Browse to http://localhost:8080
+Browse to http://localhost:8088
 
 ### More Docker commands
 - List all processes, even if not running: `docker ps -a`

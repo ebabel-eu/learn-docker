@@ -8,7 +8,6 @@
     "start": "npx @11ty/eleventy --input=./ --output=public --serve --port=8088",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker:build": "docker build -t learn-docker-image:1.0.0 .",
-    "docker:container": "docker run --name learn-docker-container -d -p 8088:80 learn-docker-image:1.0.0",
     "docker:compose": "docker-compose up"
   },
   "author": "Thomas Amar <hello@ebabel.eu>",
