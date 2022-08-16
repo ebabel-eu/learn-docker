@@ -9,9 +9,16 @@ services:
     mem_limit: 2048m
     ports:
       - "8088:80"
+    depends_on:
+      learn-docker-database-service:
+        condition: service_healthy
   learn-docker-database-service:
     image: mysql:5.7
     container_name: learn-docker-mysql
     restart: unless-stopped
     volumes:
       - db_data
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10

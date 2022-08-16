@@ -70,3 +70,14 @@ To stop running, execute `npm run docker:stop`
 - Generate a static page from a template and data from the database.
 - Build admin forms to easily manage the data in the database.
 - Deploy to S3 using the aws command line, like my other sites.
+
+## troubleshooting
+
+### docker-compose: command not found
+Install docker-compose:
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/2.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+```
